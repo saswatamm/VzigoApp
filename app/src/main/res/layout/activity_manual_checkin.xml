@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/signupback"
+    tools:context=".Manual_Checkin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:background="@drawable/homepage_header"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/backImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="24dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/vzigo_manualcheckin_back"
+                    android:gravity="end"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+
+                    android:paddingRight="20dp"
+                    android:paddingBottom="4dp">
+
+                    <LinearLayout
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/logo_back"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/logo" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/jost_semibold"
+                        android:gravity="center_vertical"
+                        android:text="VIZGO"
+                        android:textColor="#6146C6"
+                        android:textSize="10.58sp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Enter Your Details"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="-36dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Phone Number"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    app:ccp_defaultNameCode="US" />
+
+                <EditText
+                    android:textColorHighlight="@color/white"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:id="@+id/Phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/inter_medium"
+                    android:hint="12345 12345"
+                    android:textColor="#2B2B2B"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Name"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/Visitorname"
+                android:importantForAutofill="no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:hint="Visitor Name"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Date of Birth"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+            <!--Changes needed-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edittext_back"
+                    >
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/white"
+
+                        android:hint="DD"
+                        android:textColor="#2B2B2B"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter_medium" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edittext_back">
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/white"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter_medium"
+                        android:hint="MM"
+                        android:textColor="#2B2B2B"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_back"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginRight="0dp"
+                        android:background="@color/white"
+
+                        android:hint="YYYY"
+                        android:textColor="#2B2B2B"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/inter_medium"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Address"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitoraddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="Visitor Address"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="City"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visior_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="Visitor City"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Zip Code"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="1234 1256"
+                android:inputType="number"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Purpose of Visit"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_reasontovisit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="Reason to Visit"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Government Id"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_govtdoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="Document Name"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium" />
+
+
+        </LinearLayout>
+
+        <!--Changes required-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="horizontal"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_vertical"
+                android:text="Covid Vaccinated"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/Switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="24dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textOff="No"
+                android:textOn="Yes"
+
+                android:thumb="@drawable/thumb"
+                app:showText="true"
+                app:switchTextAppearance="@style/SwitchText"
+                app:track="@drawable/track" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:textColor="#9A9A9A"
+
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_medium"
+                android:gravity="center_vertical"
+                android:text="I hereby consent to the processing of the personal data that I have provided."
+                android:textColor="#707070"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/takeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rad16_primarycolorback"
+            android:paddingTop="19dp"
+            android:paddingBottom="19dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:text="TAKE A PHOTO"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!---->
+
+
+</ScrollView>

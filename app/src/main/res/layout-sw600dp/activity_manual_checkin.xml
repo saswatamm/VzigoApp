@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Manual_Checkin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="355dp"
+            android:background="@drawable/homepage_header"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:id="@+id/backImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="40dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/vzigo_manualcheckin_back"
+                    android:gravity="end"
+                    android:paddingLeft="39dp"
+                    android:paddingTop="9dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="9dp">
+
+                    <LinearLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:gravity="center"
+                        android:background="@drawable/logo_back"
+                        >
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/logo_vzigo" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/jost_semibold"
+                        android:gravity="center_vertical"
+                        android:text="VIZGO"
+                        android:textColor="#6146C6"
+                        android:textSize="19sp" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Enter Your Details"
+                android:textColor="@color/white"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="-56dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Phone Number"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    app:ccp_defaultNameCode="US" />
+
+                <EditText
+                    android:inputType="number"
+                    android:textColorHighlight="@color/white"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:importantForAutofill="no"
+                    android:id="@+id/Phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/inter_regular"
+                    android:hint="12345 12345"
+                    android:textColor="#2B2B2B"
+                    android:textSize="23sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Name"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/Visitorname"
+                android:importantForAutofill="no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Visitor Name"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="40dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Date of Birth"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+            <!--Changes needed-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginRight="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edittext_back"
+                    >
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:background="@color/white"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="Date"
+                        android:textColor="#2B2B2B"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginLeft="43dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edittext_back">
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="Month"
+                        android:textColor="#2B2B2B"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_back"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="43dp"
+                    android:layout_weight="1.5">
+
+                    <EditText
+                        android:importantForAutofill="no"
+                        android:id="@+id/Visitor_dob_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginRight="0dp"
+                        android:background="@color/white"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="Year"
+                        android:textColor="#2B2B2B"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Address"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitoraddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Visitor Address"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="City"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visior_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Visitor City"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Zip Code"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="1234 1256"
+                android:inputType="number"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Purpose of Visit"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_reasontovisit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Reason to Visit"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Government Id"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_govtdoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Document Name"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
+        <!--Changes required-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center_vertical"
+                android:text="Covid Vaccinated"
+                android:textColor="#9A9A9A"
+                android:textSize="23sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/Switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="24dp"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textOff="No"
+                android:textOn="Yes"
+                android:thumb="@drawable/thumb"
+                app:showText="true"
+                app:switchTextAppearance="@style/SwitchText"
+                app:track="@drawable/track" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:textColor="#9A9A9A"
+
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-8dp"
+
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:gravity="center_vertical"
+                android:text="I hereby consent to the processing of the personal data that I have provided."
+                android:textColor="#707070"
+                android:textSize="20sp" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/takeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/rad16_primarycolorback"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:text="TAKE A PHOTO"
+                android:textColor="@color/white"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+    <!---->
+
+
