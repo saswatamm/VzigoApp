@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,9 +8,7 @@
     android:background="@color/signupback"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
 
 
@@ -20,24 +18,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp">
 
         <LinearLayout
-            android:layout_width="33dp"
-            android:layout_height="33dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:layout_marginLeft="18dp"
             android:background="@drawable/logo_back_recent"
             android:gravity="center">
 
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="15dp"
+                android:layout_width="28dp"
+                android:layout_height="26dp"
                 android:layout_gravity="center_vertical"
                 android:src="@drawable/logo" />
         </LinearLayout>
 
-        <!--Company name-->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo_latest_final"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="2dp"/>
+
+        <!--Company name
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,11 +52,12 @@
             android:gravity="center_vertical"
             android:text="VZIGO"
             android:textColor="@color/darkish_back"
-            android:textSize="19.25sp" />
+            android:textSize="24sp" />-->
 
         <!--Sign up-->
 
         <TextView
+            android:id="@+id/SignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -60,21 +66,23 @@
             android:gravity="end"
             android:text="SIGN UP"
             android:textColor="@color/darkish_back"
-            android:textSize="14sp" />
+            android:textSize="24sp" />
 
 
     </LinearLayout>
 
 
     <LinearLayout
+        android:layout_below="@+id/l1"
         android:id="@+id/linearLayout6"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:gravity="center"
-        android:layout_height="220dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
+        android:layout_above="@id/linearLayout7"
 
-        app:layout_constraintTop_toBottomOf="@+id/l1" >
+        >
 
         <ImageView
             android:layout_width="match_parent"
@@ -86,23 +94,20 @@
 
     <!--Text-->
     <LinearLayout
+        android:layout_above="@id/linearLayout8"
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Smart Visitor\nManagement 1"
+            android:text="Smart Visitor Management"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="20dp"
-            android:textSize="28sp"
+            android:layout_marginTop="30dp"
+            android:textSize="32sp"
             android:lineSpacingExtra="5dp"
             android:fontFamily="@font/inter_bold"
             android:textColor="@color/black"/>
@@ -113,39 +118,38 @@
             android:text="Manage &amp; track your visitors with a seamless digital process."
             android:fontFamily="@font/inter_regular"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="10dp"
             android:letterSpacing="0.06"
-            android:textSize="14sp"
+            android:textSize="24sp"
             android:lineSpacingExtra="5dp"
             android:textColor="#707070"/>
 
     </LinearLayout>
 
     <LinearLayout
+
         android:id="@+id/linearLayout8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="24dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rad16_whiteback"
         android:orientation="vertical"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+        android:paddingBottom="10dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
             android:text="Link this device"
             android:textColor="#707070"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:fontFamily="@font/inter_regular"/>
+            android:textSize="20sp" />
 
         <LinearLayout
             android:id="@+id/enter_a_code"
@@ -166,7 +170,7 @@
                 android:paddingBottom="18dp"
                 android:text="ENTER A CODE"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -193,7 +197,7 @@
                 android:gravity="center_horizontal"
                 android:text="OR"
                 android:textColor="#C4C4C4"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
             <View
                 android:layout_width="match_parent"
@@ -226,18 +230,17 @@
                 android:paddingBottom="18dp"
                 android:text="OPEN CODE SCANNER"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/wrong_pass_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/wrong_pass_text"
+            android:fontFamily="@font/inter_semibold"
             android:gravity="center"
             android:textSize="14sp"
-            android:fontFamily="@font/inter_semibold"
-            android:visibility="gone"/>
-
+            android:visibility="gone" />
 
 
     </LinearLayout>
@@ -251,32 +254,4 @@
 
 
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="24dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="24dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+</RelativeLayout>

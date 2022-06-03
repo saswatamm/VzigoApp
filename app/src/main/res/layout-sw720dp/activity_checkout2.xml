@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6146C6"
+    tools:context=".Checkout2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/lottie_animation"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_anim.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkoutText"
+            android:layout_below="@+id/lottie_animation"
+            android:text="Check-Out Successful"
+            android:gravity="center_horizontal"
+            android:textSize="44sp"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkoutText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center_horizontal"
+            android:text="You have checked out successfully!"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -67,6 +67,60 @@
         <entry key="..\:/Users/saswa/AndroidStudioProjects/Vzigo/app/src/main/res/layout/digitalpass_dialogbox.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/saswa/AndroidStudioProjects/Vzigo/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.16621376811594202" />
         <entry key="..\:/Users/saswa/AndroidStudioProjects/Vzigo/app/src/main/res/layout/fragment_bottom_sheet2.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/close.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/drawable-v24/rad16_primarybtn_darkish.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable-v24/rad16_whiteback.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable-v24/rounded_outline.xml" value="0.275" />
+        <entry key="app/src/main/res/drawable-v24/thumb.xml" value="0.25794871794871793" />
+        <entry key="app/src/main/res/drawable-v24/track.xml" value="0.25794871794871793" />
+        <entry key="app/src/main/res/drawable/rad16_bottomback.xml" value="0.275" />
+        <entry key="app/src/main/res/layout-notlong/activity_demo.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout-notlong/activity_main.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_checkout2.xml" value="0.11953125" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_digital_pass.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_feed_back.xml" value="0.33" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_home_page.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_main.xml" value="0.335" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_manual_checkin.xml" value="0.4326409635368412" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_pagebefore_manual.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout-sw600dp/activity_subscription.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw600dp/checkin_qr_custombox.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout-sw600dp/digitalpass_dialogbox.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout-sw600dp/fragment_bottom_sheet.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw600dp/fragment_bottom_sheet2.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout-sw600dp/wrongpassword.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_checkout2.xml" value="0.165" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_digital_pass.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_feed_back.xml" value="0.146875" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_home_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout-sw720dp/activity_subscription.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout/activity_capture_image.xml" value="0.12817028985507245" />
+        <entry key="app/src/main/res/layout/activity_checkout1.xml" value="0.1322463768115942" />
+        <entry key="app/src/main/res/layout/activity_checkout2.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout/activity_demo.xml" value="0.2869097565869236" />
+        <entry key="app/src/main/res/layout/activity_digital_pass.xml" value="0.36923076923076925" />
+        <entry key="app/src/main/res/layout/activity_feed_back.xml" value="0.159375" />
+        <entry key="app/src/main/res/layout/activity_feedback_splash.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_loading_anim.xml" value="0.19583333333333333" />
+        <entry key="app/src/main/res/layout/activity_loading_anim2.xml" value="0.2056159420289855" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_manual_checkin.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_pagebefore_manual.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_qr_checkin.xml" value="0.18885869565217392" />
+        <entry key="app/src/main/res/layout/activity_scanner.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.18359375" />
+        <entry key="app/src/main/res/layout/activity_subscription.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/checkin_qr_custombox.xml" value="0.12368421052631579" />
+        <entry key="app/src/main/res/layout/demorelative.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/digitalpass_dialogbox.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_bottom_sheet2.xml" value="0.12368421052631579" />
+        <entry key="app/src/main/res/layout/shimmereffect.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/wrongpassword.xml" value="0.33067782324674255" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.18385416666666668" />
       </map>
     </option>
   </component>

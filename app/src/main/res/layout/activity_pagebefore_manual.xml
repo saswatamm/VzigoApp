@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/signupback"
+    tools:context=".PagebeforeManual"
+    android:orientation="vertical">
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="212dp"
+            android:background="@drawable/homepage_header"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/backImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="24dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/vzigo_manualcheckin_back"
+                    android:gravity="end"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="4dp"
+
+                    android:paddingRight="20dp"
+                    android:paddingBottom="4dp">
+
+                    <LinearLayout
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/logo_back"
+                        android:padding="3dp">
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/logo" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/logo_latest_final" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="Enter Your Details"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/belowheader"
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="-36dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Phone Number"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    app:ccp_defaultNameCode="US"
+                    android:layout_alignParentStart="true"/>
+
+                <EditText
+                    android:id="@+id/Phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toEndOf="@+id/ccp"
+                    android:background="@color/white"
+                    android:defaultFocusHighlightEnabled="false"
+                    android:fontFamily="@font/inter_medium"
+                    android:hint="12345 12345"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:textColor="#2B2B2B"
+                    android:textColorHighlight="@color/white"
+                    android:textSize="12sp" />
+
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <!--Changes required-->
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rad16_primarycolorback"
+        android:paddingTop="19dp"
+        android:paddingBottom="19dp">
+
+        <TextView
+            android:id="@+id/TakeImageText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#B0000000">
+
+            <ProgressBar
+                android:id="@+id/pBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            </ProgressBar>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!---->
+
+
+</RelativeLayout>

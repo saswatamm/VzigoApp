@@ -60,8 +60,34 @@ public class Qr_Checkin extends AppCompatActivity implements ZXingScannerView.Re
     @Override
     public void handleResult(Result rawResult) {
         String code = rawResult.getText();
+        int i=0;
+        int k=0;
+        for(int j=code.length()-1;j>=0;j--)
+        {
+            if(code.charAt(j)=='/')
+            {
+                i=j;
+                break;
+            }
+        }
+        for(int j=i-1;j>=0;j--)
+        {
+            if(code.charAt(j)=='/')
+            {
+                k=j;
+                break;
+            }
+        }
+        String url =  code.substring(k+1,i);
+        Manual_Checkin.visitorId = url;
+        if(HomePage.photoCapture){
         BottomSheet2 bottomSheet2 = new BottomSheet2();
-        bottomSheet2.show(getSupportFragmentManager(), bottomSheet2.getTag());
+        bottomSheet2.show(getSupportFragmentManager(), bottomSheet2.getTag());}
+        else
+        {
+            Intent intent = new Intent(getApplicationContext(),Loading_anim2.class);
+            startActivity(intent);
+        }
 
     }
     @Override

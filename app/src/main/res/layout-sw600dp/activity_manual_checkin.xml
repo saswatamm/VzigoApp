@@ -56,16 +56,12 @@
                             android:src="@drawable/logo_vzigo" />
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/logo_latest_final"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/jost_semibold"
-                        android:gravity="center_vertical"
-                        android:text="VIZGO"
-                        android:textColor="#6146C6"
-                        android:textSize="19sp" />
+                        android:layout_marginTop="3dp"/>
 
 
                 </LinearLayout>
@@ -103,7 +99,7 @@
                 android:textColor="#9A9A9A"
                 android:textSize="20sp" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16dp"
@@ -115,32 +111,45 @@
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginTop="10dp"
-                    app:ccp_defaultNameCode="US" />
+                    app:ccp_defaultNameCode="US"
+                    android:layout_alignParentStart="true"/>
 
                 <EditText
-                    android:inputType="number"
-                    android:textColorHighlight="@color/white"
-                    android:defaultFocusHighlightEnabled="false"
-                    android:importantForAutofill="no"
                     android:id="@+id/Phoneno"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="24dp"
+                    android:layout_toStartOf="@+id/vector"
+                    android:layout_toEndOf="@+id/ccp"
                     android:background="@color/white"
+                    android:defaultFocusHighlightEnabled="false"
                     android:fontFamily="@font/inter_regular"
                     android:hint="12345 12345"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
                     android:textColor="#2B2B2B"
+                    android:textColorHighlight="@color/white"
                     android:textSize="23sp" />
 
+                <ImageView
+                    android:id="@+id/vector"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/vector"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"/>
 
-            </LinearLayout>
+
+            </RelativeLayout>
 
 
         </LinearLayout>
 
 
         <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
@@ -180,7 +189,7 @@
         </LinearLayout>
 
         <LinearLayout
-
+            android:id="@+id/dateofbirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/rad12_whiteback"
@@ -219,7 +228,7 @@
                     android:paddingBottom="6dp"
                     android:paddingLeft="10dp"
                     android:gravity="center_vertical"
-                    android:background="@drawable/edittext_back"
+
                     >
 
                     <EditText
@@ -231,6 +240,7 @@
                         android:background="@color/white"
                         android:fontFamily="@font/inter_regular"
                         android:hint="Date"
+                        android:maxLength="2"
                         android:textColor="#2B2B2B"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -245,7 +255,7 @@
                     android:paddingLeft="10dp"
                     android:layout_marginLeft="43dp"
                     android:gravity="center_vertical"
-                    android:background="@drawable/edittext_back">
+                    >
 
                     <EditText
                         android:importantForAutofill="no"
@@ -258,6 +268,7 @@
                         android:background="@color/white"
                         android:fontFamily="@font/inter_regular"
                         android:hint="Month"
+                        android:maxLength="2"
                         android:textColor="#2B2B2B"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -265,7 +276,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_back"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
                     android:paddingLeft="8dp"
@@ -284,6 +294,7 @@
                         android:background="@color/white"
                         android:fontFamily="@font/inter_regular"
                         android:hint="Year"
+                        android:maxLength="2"
                         android:textColor="#2B2B2B"
                         android:textSize="20sp" />
                 </LinearLayout>
@@ -295,6 +306,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -333,6 +345,87 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Gender"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:importantForAutofill="no"
+                android:id="@+id/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Male"
+                android:textColor="#2B2B2B"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Email"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="someone@example.com"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/City"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -371,6 +464,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ZipCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -410,6 +504,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PurposeOfVisit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -446,6 +541,46 @@
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/PersontoVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Whom to Visit"
+                android:textColor="#9A9A9A"
+                android:textSize="20sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/VisitorPersontovisit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:fontFamily="@font/inter_regular"
+                android:hint="Mr.John Doe"
+                android:textColor="#2B2B2B"
+                android:textSize="23sp" />
+
+
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -578,6 +713,7 @@
             >
 
             <TextView
+                android:id="@+id/TakeImageText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

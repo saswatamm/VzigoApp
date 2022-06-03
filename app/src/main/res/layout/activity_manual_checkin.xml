@@ -7,6 +7,8 @@
     android:background="@color/signupback"
     tools:context=".Manual_Checkin">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -60,16 +62,11 @@
                             android:src="@drawable/logo" />
                     </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginTop="2dp"
-                        android:fontFamily="@font/jost_semibold"
-                        android:gravity="center_vertical"
-                        android:text="VIZGO"
-                        android:textColor="#6146C6"
-                        android:textSize="10.58sp" />
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/logo_latest_final" />
 
 
                 </LinearLayout>
@@ -107,37 +104,32 @@
                 android:textColor="#9A9A9A"
                 android:textSize="12sp" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
-                    android:id="@+id/ccp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="10dp"
-                    app:ccp_defaultNameCode="US" />
 
-                <EditText
-                    android:textColorHighlight="@color/white"
-                    android:defaultFocusHighlightEnabled="false"
-                    android:importantForAutofill="no"
-                    android:inputType="number"
+                <TextView
                     android:id="@+id/Phoneno"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="0dp"
                     android:background="@color/white"
+                    android:defaultFocusHighlightEnabled="false"
                     android:fontFamily="@font/inter_medium"
                     android:hint="12345 12345"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
                     android:textColor="#2B2B2B"
+                    android:textColorHighlight="@color/white"
                     android:textSize="12sp" />
 
 
-            </LinearLayout>
+
+
+            </RelativeLayout>
 
 
         </LinearLayout>
@@ -181,8 +173,13 @@
 
         </LinearLayout>
 
+
+
+
+
         <LinearLayout
 
+            android:id="@+id/dateofbirth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -192,7 +189,8 @@
             android:elevation="0dp"
             android:orientation="vertical"
             android:paddingTop="12dp"
-            android:paddingBottom="12dp">
+            android:paddingBottom="12dp"
+            >
 
             <TextView
                 android:layout_width="match_parent"
@@ -221,7 +219,7 @@
                     android:paddingBottom="6dp"
                     android:paddingLeft="10dp"
                     android:gravity="center_vertical"
-                    android:background="@drawable/edittext_back"
+
                     >
 
                     <EditText
@@ -232,7 +230,7 @@
                         android:inputType="number"
                         android:layout_marginRight="24dp"
                         android:background="@color/white"
-
+                        android:maxLength="2"
                         android:hint="DD"
                         android:textColor="#2B2B2B"
                         android:textSize="12sp"
@@ -249,7 +247,7 @@
                     android:paddingLeft="10dp"
                     android:layout_marginLeft="5dp"
                     android:gravity="center_vertical"
-                    android:background="@drawable/edittext_back">
+                    >
 
                     <EditText
                         android:importantForAutofill="no"
@@ -264,6 +262,7 @@
                         android:textSize="12sp"
                         android:fontFamily="@font/inter_medium"
                         android:hint="MM"
+                        android:maxLength="2"
                         android:textColor="#2B2B2B"
                          />
                 </LinearLayout>
@@ -271,7 +270,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edittext_back"
                     android:paddingTop="6dp"
                     android:paddingBottom="6dp"
                     android:paddingLeft="8dp"
@@ -288,8 +286,8 @@
                         android:inputType="number"
                         android:layout_marginRight="0dp"
                         android:background="@color/white"
-
                         android:hint="YYYY"
+                        android:maxLength="4"
                         android:textColor="#2B2B2B"
                         android:textSize="12sp"
                         android:fontFamily="@font/inter_medium"/>
@@ -302,6 +300,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -341,6 +340,86 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Gender"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <Spinner
+                android:importantForAutofill="no"
+                android:id="@+id/Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:hint="Male"
+                android:textColor="#2B2B2B"
+                android:textSize="8sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Email"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/Visitor_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+
+                android:hint="name@example.com"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/City"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -360,26 +439,28 @@
                 android:text="City"
                 android:textColor="#9A9A9A"
                 android:textSize="12sp" />
-
             <EditText
                 android:importantForAutofill="no"
-                android:id="@+id/Visior_city"
+                android:id="@+id/Visitor_city"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
                 android:background="@color/white"
-
-                android:hint="Visitor City"
+                android:hint="Pune"
                 android:textColor="#2B2B2B"
                 android:textSize="12sp"
                 android:fontFamily="@font/inter_medium"/>
 
 
+
+
+
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ZipCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -420,6 +501,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PurposeOfVisit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -449,7 +531,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="24dp"
                 android:background="@color/white"
-
                 android:hint="Reason to Visit"
                 android:textColor="#2B2B2B"
                 android:textSize="12sp"
@@ -459,6 +540,46 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/PersontoVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/rad12_whiteback"
+            android:elevation="0dp"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="Whom To Visit"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp" />
+
+            <EditText
+                android:importantForAutofill="no"
+                android:id="@+id/VisitorPersontovisit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="24dp"
+                android:background="@color/white"
+                android:hint="Mr.John Doe"
+                android:textColor="#2B2B2B"
+                android:textSize="12sp"
+                android:fontFamily="@font/inter_medium"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/GovernmentId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -500,6 +621,7 @@
         <!--Changes required-->
 
         <LinearLayout
+            android:id="@+id/CovidVaccinated"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -532,7 +654,6 @@
                 android:textColor="@color/white"
                 android:textOff="No"
                 android:textOn="Yes"
-
                 android:thumb="@drawable/thumb"
                 app:showText="true"
                 app:switchTextAppearance="@style/SwitchText"
@@ -541,7 +662,9 @@
 
         </LinearLayout>
 
+
         <LinearLayout
+            android:id="@+id/DigitalSignature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -590,6 +713,7 @@
             android:paddingBottom="19dp">
 
             <TextView
+                android:id="@+id/TakeImageText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

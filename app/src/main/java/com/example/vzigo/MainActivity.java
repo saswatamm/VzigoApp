@@ -3,6 +3,7 @@ package com.example.vzigo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static String password="12345678";
     static TextView wrongpasstext;
     static String android_id;
+    TextView signUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,19 @@ public class MainActivity extends AppCompatActivity {
                 Secure.ANDROID_ID);
 
 
+        signUp = findViewById(R.id.SignUp);
 
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Toast.makeText(getApplicationContext(), "Working", Toast.LENGTH_SHORT).show();
+                Intent viewIntent =
+                        new Intent("android.intent.action.VIEW",
+                                Uri.parse("https://www.vzigo.com"));
+                startActivity(viewIntent);
+            }
+        });
         wrongpasstext = findViewById(R.id.wrong_pass_text);
         LinearLayout enter = findViewById(R.id.enter_a_code);
         enter.setOnClickListener(new View.OnClickListener() {
@@ -51,5 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finishAffinity();
     }
 }

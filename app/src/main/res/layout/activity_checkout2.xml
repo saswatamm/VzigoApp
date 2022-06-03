@@ -5,43 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#6146C6"
-    tools:context=".Checkout2"
-    android:orientation="vertical">
+    tools:context=".Checkout2">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:id="@+id/lottie_animation"
-        app:lottie_loop="true"
-        android:layout_centerInParent="true"
-        app:lottie_fileName="lottie_anim.json"
-        app:lottie_autoPlay="true"/>
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Check-Out Successful"
-        android:gravity="center_horizontal"
-        android:id="@+id/checkoutSuccessful"
-        android:textSize="24sp"
-        android:layout_below="@+id/lottie_animation"
-        android:fontFamily="@font/inter_semibold"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:text="Jonas Hayden has been checked out successfully!"
-        android:gravity="center_horizontal"
-        android:layout_below="@+id/checkoutSuccessful"
-        android:textSize="16sp"
-        android:fontFamily="@font/inter_semibold"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"/>
+        android:layout_centerInParent="true">
 
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_anim.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/checkoutSuccessful"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lottie_animation"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center_horizontal"
+            android:text="Check-Out Successful"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkoutSuccessful"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/inter_semibold"
+            android:gravity="center_horizontal"
+            android:text="You have checked out successfully!"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
 </RelativeLayout>

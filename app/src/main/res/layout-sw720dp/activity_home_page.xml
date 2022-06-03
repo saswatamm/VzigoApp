@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,116 +11,122 @@
 
 
 
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_alignParentStart="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/homepage_header"
+        android:orientation="vertical">
+
         <LinearLayout
+            android:id="@+id/headerText"
             android:layout_width="match_parent"
-            android:layout_height="212dp"
-            android:background="@drawable/homepage_header"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/calender_pic" />
+
+            <TextView
+                android:id="@+id/date_and_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:fontFamily="@font/inter_regular"
+
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerText"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:id="@+id/headerTitle"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Good Afternoon"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/CompanyDetails1"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-110dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rad16_whiteback"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/CompanyDetails2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:gravity="center_horizontal"
+            android:paddingRight="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="30dp">
-
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="1dp"
-                    android:src="@drawable/calender_pic" />
-
-                <TextView
-                    android:id="@+id/date_and_time"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/inter_regular"
-
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/inter_semibold"
-                android:text="Good Afternoon"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-        </LinearLayout>
-
-        <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:paddingTop="5dp"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="-80dp"
-        android:background="@drawable/rad16_whiteback"
-        android:elevation="2dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="25dp"
-            android:paddingRight="10dp">
-
-
+                android:gravity="center_horizontal">
 
             <ImageView
-
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/bank_of_america_logo"
                 android:id="@+id/icon"
+                android:layout_width="140dp"
+                android:layout_height="80dp"
                 android:visibility="visible"
-
-                android:layout_gravity="center_horizontal"
-
-
-
-
                 />
 
             <TextView
                 android:id="@+id/companyname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:paddingTop="14dp"
-                android:letterSpacing="0.20"
-                android:layout_marginTop="50dp"
-                android:autoSizeMaxTextSize="22sp"
-                android:autoSizeMinTextSize="20sp"
+                android:text="DLF Housing "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:autoSizeMaxTextSize="58sp"
+                android:autoSizeMinTextSize="16sp"
                 android:autoSizeTextType="uniform"
                 android:fontFamily="@font/inter_bold"
-                android:layout_marginLeft="10dp"
-                android:gravity="start"
-                android:maxHeight="60dp"
-                android:text="BANK OF AMERICA1"
+
+                android:letterSpacing="0.20"
+                android:paddingTop="14dp"
+
                 android:textColor="#18005B"
-                android:textSize="20sp" />
+                android:textSize="42sp" />
         </LinearLayout>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/powered_by_back"
+            android:layout_below="@+id/CompanyDetails2"
+            android:layout_alignParentEnd="true"
             android:layout_gravity="end"
+            android:layout_marginTop="-58dp"
             android:layout_marginRight="0dp"
-            android:layout_marginTop="-30dp"
-            android:paddingBottom="4.2dp"
-            android:paddingTop="5dp"
+            android:background="@drawable/powered_by_back"
+
+
             android:paddingLeft="10dp"
+            android:paddingTop="5dp"
             android:paddingRight="5dp"
 
             >
@@ -128,43 +134,62 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/inter_semibold"
                 android:text="Powered by"
-                android:textSize="12sp"
-                android:layout_marginTop="3dp"
                 android:textColor="#6146C6"
-                android:fontFamily="@font/inter_semibold"/>
+                android:textSize="24sp" />
+
             <LinearLayout
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
-                android:padding="3dp"
-                android:background="@drawable/logo_back">
+                android:layout_marginBottom="3dp"
+                android:background="@drawable/logo_back"
+                android:paddingLeft="4dp"
+                android:paddingTop="3dp"
+                android:paddingRight="1dp"
+                android:paddingBottom="2dp">
 
                 <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginLeft="1dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
                     android:src="@drawable/logo" />
             </LinearLayout>
-            <TextView
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="23dp"
+                android:src="@drawable/logo_latest_final"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="7dp"/>
+
+            <!--<TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIZGO"
-                android:textSize="10.58sp"
-                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/jost_semibold"
+                android:text="VIZGO"
                 android:textColor="#6146C6"
-                android:layout_marginLeft="5dp"/>
+                android:textSize="20sp" />-->
 
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/WelcomeBack"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CompanyDetails1"
+        android:layout_above="@+id/viewFlipper"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/welcome_back">
 
 
@@ -175,10 +200,10 @@
             android:background="@drawable/rad16_whiteback"
             android:elevation="1dp"
             android:orientation="vertical"
-            android:paddingLeft="3dp"
-            android:paddingTop="5dp"
-            android:paddingRight="3dp"
-            android:paddingBottom="5dp">
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="8dp">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/qr_code"
@@ -188,107 +213,100 @@
                 android:scaleType="fitCenter"
                 app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_regular"
-                android:letterSpacing="0.05"
-                android:paddingBottom="5dp"
-                android:text="Please scan this QR"
-                android:textColor="#AAAAAA"
-                android:textSize="15.47sp" />
+
         </LinearLayout>
     </RelativeLayout>
 
-
     <ViewFlipper
-        android:id="@+id/viewFlipper"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/bottomend"
+        android:paddingRight="4dp"
 
-        android:layout_marginTop="-5dp"
 
 
-        android:flipInterval="4000"
+
+
         android:inAnimation="@android:anim/slide_in_left"
         android:outAnimation="@android:anim/slide_out_right"
-        android:paddingRight="4dp">
+        android:flipInterval="4000"
+        android:id="@+id/viewFlipper">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:id="@+id/l1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:background="@drawable/rad12_whiteback"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/rad12_whiteback"
-            android:elevation="1.5dp"
-            android:orientation="vertical"
             android:paddingTop="4dp"
+            android:elevation="1.5dp"
+            android:layout_marginBottom="5dp"
             android:paddingBottom="10dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/inter_semibold"
-                android:text="Welcome to ABC Housing Ltd"
-                android:textColor="#2b2b2b"
-                android:textSize="14sp" />
-
+                android:textSize="28sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#2b2b2b"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/inter_regular"
                 android:lineSpacingExtra="10dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis sit nisi, senectus est. Egestas."
+                android:fontFamily="@font/inter_regular"
                 android:textColor="#5f5f5f"
-                android:textSize="12sp" />
+                android:textSize="24sp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/l2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/l2"
+            android:background="@drawable/rad12_whiteback"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/rad12_whiteback"
-            android:elevation="1.5dp"
-            android:orientation="vertical"
             android:paddingTop="4dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="1.5dp"
             android:paddingBottom="10dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="10dp"
                 android:fontFamily="@font/inter_semibold"
-                android:text="Welcome to ABC Housing Ltd"
-                android:textColor="#2b2b2b"
-                android:textSize="14sp" />
-
+                android:textSize="28sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="14dp"
+                android:textColor="#2b2b2b"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/inter_regular"
                 android:lineSpacingExtra="10dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis sit nisi, senectus est. Egestas."
+                android:fontFamily="@font/inter_regular"
                 android:textColor="#5f5f5f"
-                android:textSize="12sp" />
+                android:textSize="24sp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="5dp"/>
         </LinearLayout>
     </ViewFlipper>
 
+
+
+
     <RelativeLayout
+        android:id="@+id/bottomend"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         >
 
@@ -312,11 +330,11 @@
                 android:fontFamily="@font/inter_bold"
                 android:text="Check-In"
                 android:textColor="#6146C6"
-                android:textSize="16sp" />
+                android:textSize="28sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginLeft="20dp"
                 android:src="@drawable/check_in" />
 
@@ -327,7 +345,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginLeft="10dp"
+
             android:layout_marginRight="24dp"
             android:layout_weight="1"
             android:background="@drawable/rad10_whiteback"
@@ -343,11 +361,11 @@
                 android:fontFamily="@font/inter_bold"
                 android:text="Check-Out"
                 android:textColor="#6146C6"
-                android:textSize="16sp" />
+                android:textSize="28sp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
                 android:layout_marginLeft="6dp"
                 android:src="@drawable/check_out" />
 
@@ -363,7 +381,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/tap_to_checkin"
 
             android:layout_marginTop="-19.8dp"
@@ -372,7 +390,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 >
 
@@ -381,12 +399,15 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:layout_marginTop="30dp"
+                    android:layout_marginBottom="50dp"
+
+
 
                     >
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
                         android:layout_marginTop="4.5dp"
                         android:layout_gravity="center"
                         android:src="@drawable/feedback_img" />
@@ -401,7 +422,7 @@
                         android:layout_marginTop="2dp"
                         android:text="Feedback"
                         android:textColor="@color/white"
-                        android:textSize="16sp" />
+                        android:textSize="28sp" />
 
                 </LinearLayout>
 
@@ -415,7 +436,7 @@
 
         </LinearLayout>
     </RelativeLayout>
-    </LinearLayout>
+</RelativeLayout>
 
 
 

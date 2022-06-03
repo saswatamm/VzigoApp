@@ -20,32 +20,28 @@ public class Feedback_splash extends AppCompatActivity {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
         {
             Window window = this.getWindow();
-            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+            window.setStatusBarColor(this.getResources().getColor(R.color.primary_btn));
         }
 
-        VideoView videoView = findViewById(R.id.videoView1);
-        String path = "android.resource://com.example.vzigo/" + R.raw.feedback_animation;
+        Thread thread = new Thread(){
+            public void run(){
+                try{
+                    sleep(2800);
+                }
+                catch (Exception e)
+                {
 
-        Uri uri = Uri.parse(path);
-        videoView.setVideoURI(uri);
-
-
-
-
-
-        videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener(){
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.start();
+                }
+                finally {
+                    Intent intent = new Intent(getApplicationContext(), HomePage.class);
+                    startActivity(intent);
+                }
             }
-        });
-        videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                Intent intent = new Intent(getApplicationContext(), HomePage.class);
-                startActivity(intent);
-            }
-        });
+        };thread.start();
+
+
+
+
 
     }
 }
